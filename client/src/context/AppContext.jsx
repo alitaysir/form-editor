@@ -16,7 +16,7 @@ const AppContextProvider = (props) => {
 
   // Fetch all tests from the backend when AppContext is loaded
   useEffect(() => {
-    axios.get("http://localhost:5001/api/test")
+    axios.get("https://form-editor-ssql.onrender.com/api/test")
       .then((response) => {
         setTests(response.data);
       })
