@@ -6,7 +6,7 @@ import axios from 'axios';
 const DeleteTests = () => {
   const deleteAllData = async () => {
     try {
-      const response = await axios.delete('http://localhost:5001/api/test');
+      const response = await axios.delete('https://form-editor-ssql.onrender.com/api/test');
       alert(response.data.message);  // Show success message
     } catch (error) {
       console.error('Error deleting tests:', error);
