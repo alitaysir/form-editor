@@ -8,10 +8,10 @@ const ViewAnswersPage = () => {
   useEffect(() => {
     const fetchAnswersAndTests = async () => {
       try {
-        const answerResponse = await axios.get('http://localhost:5001/api/answer/all-answers');
+        const answerResponse = await axios.get('https://form-editor-ssql.onrender.com/api/answer/all-answers');
         setAnswers(answerResponse.data);
 
-        const testResponse = await axios.get('http://localhost:5001/api/test');
+        const testResponse = await axios.get('https://form-editor-ssql.onrender.com/api/test');
         console.log("Fetched Test Data:", testResponse.data);
         setTests(testResponse.data); // Store tests to match with answers
       } catch (error) {
@@ -24,7 +24,7 @@ const ViewAnswersPage = () => {
 
   const handleDeleteAllAnswers = async () => {
     try {
-      const response = await axios.delete('http://localhost:5001/api/answer/delete-all-answers');
+      const response = await axios.delete('https://form-editor-ssql.onrender.com/api/answer/delete-all-answers');
       if (response.status === 200) {
         setAnswers([]); // Clear the answers in the frontend
         alert('All answers have been deleted.');
