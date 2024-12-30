@@ -19,7 +19,7 @@ const CreateTest = () => {
         comprehension: comprehensionVal,
       };
       const res= await axios.post(
-        "http://localhost:5001/api/test/create", data);
+        "https://form-editor-ssql.onrender.com/api/test/create", data);
         
       if (res.status === 201) {
           toast.success('Test created successfully!');
